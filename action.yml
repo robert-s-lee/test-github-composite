@@ -63,4 +63,4 @@ runs:
         echo obj_id ${{ steps.obj-id-generator.outputs.obj_id }}
         echo obj_status ${{ steps.obj-id-generator.outputs.obj_status }}   
         echo obj_summary ${{ steps.obj-id-generator.outputs.obj_summary }}         
-        shell: bash
+      shell: bash
