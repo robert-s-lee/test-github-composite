@@ -31,5 +31,5 @@ runs:
       run: ${{ github.action_path }}/goodbye.sh
       shell: bash
     - id: obj-id2-generator
-      run: echo "::set-output name=obj-id2::$(date +'%y%m%d-%H%M%S')"
+      run: echo "::set-output name=obj-id2::$(date +'%Y%m%d-%H%M%S')"
       shell: bash
