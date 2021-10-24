@@ -23,6 +23,8 @@ outputs:
 runs:
   using: "composite"
   steps:
+   - run: apt install xterm
+      shell: bash  
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
