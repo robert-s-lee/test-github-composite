@@ -24,8 +24,8 @@ outputs:
     value: ${{ steps.obj-id-generator.outputs.obj_summary }}
   obj_status:
     value: ${{ steps.obj-id-generator.outputs.obj_status }}        
-  obj_exit_code:
-    value: ${{ steps.obj-id-generator.outputs.obj_exit_code }}
+  obj_id:
+    value: ${{ steps.obj-id-generator.outputs.obj_id }}
 runs:
   using: "composite"
   steps:
