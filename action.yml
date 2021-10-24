@@ -23,7 +23,7 @@ outputs:
 runs:
   using: "composite"
   steps:
-   - run: apt install xterm
+    - run: sudo apt-get install xterm
       shell: bash  
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
