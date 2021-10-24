@@ -6,7 +6,7 @@ jobs:
     name: A job to say hello
     steps:
       - uses: actions/checkout@v2
-      - id: foo
+      - id: foo_me
         uses: robert-s-lee/test-github-composite@main
         with:
           who-to-greet: 'Mona the Octocat'
@@ -17,9 +17,9 @@ jobs:
       - run: echo obj-id2 ${{ steps.foo.outputs.obj-id2 }}
         shell: bash        
       - run: | 
-          echo obj-date ${{ steps.foo.outputs.obj-date }}
-          echo obj-status ${{ steps.foo.outputs.obj-status }}
-          echo obj_id ${{ steps.foo.outputs.obj_id }}
-          echo obj_status ${{ steps.foo.outputs.obj_status }}   
-          echo obj_summary ${{ steps.foo.outputs.obj_summary }}          
+          echo obj-date ${{ steps.foo_me.outputs.obj-date }}
+          echo obj-status ${{ steps.foo_me.outputs.obj-status }}
+          echo obj_id ${{ steps.foo_me.outputs.obj_id }}
+          echo obj_status ${{ steps.foo_me.outputs.obj_status }}   
+          echo obj_summary ${{ steps.foo_me.outputs.obj_summary }}          
         shell: bash                
