@@ -19,4 +19,7 @@ jobs:
       - run: | 
           echo obj-date ${{ steps.foo.outputs.obj-date }}
           echo obj-status ${{ steps.foo.outputs.obj-status }}
+          echo obj_id ${{ steps.foo.outputs.obj_id }}
+          echo obj_status ${{ steps.foo.outputs.obj_status }}   
+          echo obj_summary ${{ steps.foo.outputs.obj_summary }}          
         shell: bash                
