@@ -16,3 +16,5 @@ jobs:
         shell: bash
       - run: echo obj-id2 ${{ steps.foo.outputs.obj-id2 }}
         shell: bash        
+      - run: echo obj-date ${{ steps.foo.outputs.obj-date }}
+        shell: bash                
