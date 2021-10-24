@@ -18,6 +18,8 @@ outputs:
   obj-date:
     description: "Object date"
     value: ${{ steps.obj-id-generator.outputs.obj-date }}
+  obj-status:
+    value: ${{ steps.obj-id-generator.outputs.obj-status }}
 runs:
   using: "composite"
   steps:
