@@ -23,6 +23,13 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.8' # min version supported by Grid.ai  
+    - uses: robert-s-lee/gridai_action_login@main
+      with:
+        username: ${{ secrets.username }} 
+        key: ${{ secrets.key }}         
     - run: sudo apt-get install xterm
       shell: bash  
     - run: echo Hello ${{ inputs.who-to-greet }}.
