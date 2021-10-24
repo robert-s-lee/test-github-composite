@@ -9,6 +9,9 @@ outputs:
   random-number:
     description: "Random number"
     value: ${{ steps.random-number-generator.outputs.random-id }}
+  obj-id:
+    description: "Object ID"
+    value: ${{ steps.obj-id-generator.outputs.obj-id }}
 runs:
   using: "composite"
   steps:
@@ -17,5 +20,6 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: bash
-    - run: ${{ github.action_path }}/goodbye.sh
+    - id: obj-id-generator
+      run: ${{ github.action_path }}/goodbye.sh
       shell: bash
