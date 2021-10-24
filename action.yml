@@ -12,6 +12,9 @@ outputs:
   obj-id:
     description: "Object ID"
     value: ${{ steps.obj-id-generator.outputs.obj-id }}
+  obj-id2:
+    description: "Object ID2"
+    value: ${{ steps.obj-id2-generator.outputs.obj-id2 }}
 runs:
   using: "composite"
   steps:
@@ -22,4 +25,7 @@ runs:
       shell: bash
     - id: obj-id-generator
       run: ${{ github.action_path }}/goodbye.sh
+      shell: bash
+    - id: obj-id2-generator
+      run: echo "::set-output name=obj-id2::$(date +'%y%m%d-%M%D%S')"
       shell: bash

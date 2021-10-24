@@ -12,3 +12,7 @@ jobs:
           who-to-greet: 'Mona the Octocat'
       - run: echo random-number ${{ steps.foo.outputs.random-number }}
         shell: bash
+      - run: echo obj-id ${{ steps.foo.outputs.obj-id }}
+        shell: bash
+      - run: echo obj-id2 ${{ steps.foo.outputs.obj-id2 }}
+        shell: bash        
