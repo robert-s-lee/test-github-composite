@@ -2,7 +2,12 @@ on: [push]
 
 jobs:
   hello_world_job:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        os: [ubuntu-latest,macos-latest,windows-latest]
+    runs-on: ${{ matrix.os }}
     name: A job to say hello
     steps:
       - uses: actions/checkout@v2
