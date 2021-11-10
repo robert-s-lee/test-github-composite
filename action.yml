@@ -51,7 +51,7 @@ runs:
       shell: bash
     - id: obj-id-generator
       # this step generates two outputs
-      run: echo "${{ github.action_path }}" >> $GITHUB_PATH; goodbye.sh
+      run: echo "${{ github.action_path }}" >> $GITHUB_PATH && goodbye.sh
       shell: bash
     - id: obj-id2-generator
       run: echo "::set-output name=obj-id2::$(date +'%Y%m%d-%H%M%S')"
