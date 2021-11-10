@@ -42,8 +42,6 @@ runs:
           echo "GRID_URL=${{ inputs.grid_url }}" >> $GITHUB_ENV 
         fi
       shell: bash       
-    - run: sudo apt-get install xterm
-      shell: bash  
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
