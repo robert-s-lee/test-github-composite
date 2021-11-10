@@ -53,6 +53,10 @@ runs:
       # this step generates two outputs
       run: goodbye.sh
       shell: bash
+    - id: obj-id-generator-2
+      # this step generates two outputs
+      run: python goodbye.py
+      shell: bash      
     - id: obj-id2-generator
       run: echo "::set-output name=obj-id2::$(date +'%Y%m%d-%H%M%S')"
       shell: bash
@@ -64,3 +68,4 @@ runs:
         echo obj_status ${{ steps.obj-id-generator.outputs.obj_status }}   
         echo obj_summary ${{ steps.obj-id-generator.outputs.obj_summary }}         
       shell: bash
+
